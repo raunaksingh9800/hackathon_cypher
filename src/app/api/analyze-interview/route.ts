@@ -22,7 +22,7 @@ if (!process.env.GOOGLE_GEMINI_API_KEY) {
   throw new Error("Missing GOOGLE_GEMINI_API_KEY environment variable");
 }
 const apiKey = process.env.GOOGLE_GEMINI_API_KEY;
-const modelName = "gemini-2.5-flash-preview-09-2025";
+const modelName = "gemini-2.5-flash-lite";
 const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`;
 
 // --- Analysis Schema ---
@@ -48,7 +48,7 @@ const responseSchema = {
     actionableFeedback: {
       type: "STRING",
       description:
-        "One concise, powerful paragraph of actionable advice for the team. This is the 'how to improve' part.",
+        "One concise, powerful paragraph of actionable advice for the team. This is the 'how to improve' part and add the text which needs to be improved.",
     },
     heatmapData: {
       type: "OBJECT",

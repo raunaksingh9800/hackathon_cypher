@@ -7,7 +7,7 @@ if (!process.env.GOOGLE_GEMINI_API_KEY) {
 }
 
 const apiKey = process.env.GOOGLE_GEMINI_API_KEY;
-const modelName = "gemini-2.5-flash-preview-09-2025";
+const modelName = "gemini-2.5-flash-lite";
 const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`;
 
 const safetySettings = [

@@ -9,7 +9,7 @@ if (!process.env.GOOGLE_GEMINI_API_KEY) {
 // Use the API key from environment variables.
 const apiKey = process.env.GOOGLE_GEMINI_API_KEY;
 // Use the model specified in my instructions for this kind of task.
-const modelName = "gemini-2.5-flash-preview-09-2025"; 
+const modelName = "gemini-2.5-flash-lite"; 
 const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`;
 
 // Safety settings as plain JSON, no SDK import needed.
