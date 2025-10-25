@@ -142,9 +142,9 @@ export default function DashboardPage() {
                   )}
                 </TableCell>
                 <TableCell className="text-right">
-                  {/* This button is now a link to the detail page */}
+                  {/* This button now links to the analysis detail page under /dashboard/simulations/[id] */}
                   <Button asChild variant="outline" size="sm" disabled={!sim.analysis}>
-                    <a href={`/dashboard/${sim.id}`} target="_blank" rel="noopener noreferrer">
+                    <a href={`/dashboard/simulations/${sim.id}`} target="_blank" rel="noopener noreferrer">
                       View Analysis
                     </a>
                   </Button>
@@ -168,4 +168,3 @@ export default function DashboardPage() {
     </div>
   );
 }
-
